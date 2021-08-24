@@ -1,0 +1,1 @@
+library class_clean_architecture_base;
