@@ -33,6 +33,11 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
+  pedantic: ^1.11.1
+  # test: ^1.17.11
+  mockito: ^5.0.15
+  build_runner: ^2.1.1
+
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
