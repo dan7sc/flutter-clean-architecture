@@ -10,8 +10,9 @@ class CreateAccount {
 
   String execute(String documentNumber) {
     var person = personRepository.recovery(documentNumber);
-    var account = Account('1');
+    var account = Account('1'); // rule to generate a number
     person.addAccount(account);
+    personRepository.save(person);
     return account.number;
   }
 }

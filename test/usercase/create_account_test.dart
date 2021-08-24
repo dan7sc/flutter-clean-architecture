@@ -24,9 +24,11 @@ void main() {
     var person = Person('Dan', 'dan@email.com', '1234');
 
     when(personRepository.recovery(person.document)).thenReturn(person);
+    when(personRepository.save(person)).thenReturn('1'); // change value for any string
 
     var createAccount = CreateAccount(personRepository);
     expect(createAccount.execute(person.document), isNotNull);
     verify(personRepository.recovery(person.document)).called(1);
+    verify(personRepository.save(person)).called(1);
   });
 }
